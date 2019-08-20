@@ -5,9 +5,9 @@ import socket
 app = Flask(__name__)
 @app.route("/")
 def hello():
-    html = "<h3>Hello APP2 {name}!</h3>" \
+    html = "<h3>Hello APP3 {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname())
     
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=100, debug=True)
+    app.run(host='0.0.0.0', port=110, debug=True)
